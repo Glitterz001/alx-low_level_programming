@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * _abs - compute absolute value of integer
+ * print_last_digit - print last digit of integer
  * @n: integer argument
- * Return: absolute value
+ * Return: last digit of number
  */
 
-int _abs(int n)
+int print_last_digit(int n)
 {
-	if (n > 0)
-		return (n);
-	else if (n < 0)
-		return (-n);
+	if (n < 0)
+		n *= -1;
 
-	return (0);
+       	_putchar('0' + (n % 10));
+
+	return (n % 10);
 }
