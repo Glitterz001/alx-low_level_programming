@@ -8,13 +8,12 @@
 int main(void)
 {
         int i;
-
+	/** Declearation */
         printf("Infinite loop incoming :(\n");
 
         i = 0;
-	/** Declearation */
-        while (i < 10)
 	/** initialization */
+        while (i < 10)
         {
                 putchar(i);
         }
