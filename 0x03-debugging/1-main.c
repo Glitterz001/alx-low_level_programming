@@ -10,7 +10,7 @@ int main(void)
 	int i;
 	/** declearing of variable */
 	printf("Infinite loop incoming :(\n");
-
+	/** assigning variables */
 		i = 0;
 	/** initializzaton */
 		while (i < 10)
