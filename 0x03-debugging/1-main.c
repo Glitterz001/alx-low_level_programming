@@ -13,9 +13,7 @@ int main(void)
 
         i = 0;
 	/** Declearation */
-
         while (i < 10)
-
 	/** initialization */
         {
                 putchar(i);
