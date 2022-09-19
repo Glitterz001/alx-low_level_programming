@@ -1,15 +1,20 @@
 #include "main.h"
 
 /**
- * main retun valid password
- * @valid password
+ * main printing valid password
+ * 
  * Return: 0 (Success)
  */
 
 int main(void)
 {
-		int a
-			a = valid password
-			printf("valid password"/n)
-		return (0)
+	char a
+		a = a..z
+		b = 1..9
+	if (a)
+		printf("valid password"\n)
+	else 
+		printf("print inavalid password"\n)
+
+	return (0)
 }
