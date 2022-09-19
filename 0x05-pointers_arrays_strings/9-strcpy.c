@@ -39,11 +39,11 @@ char *_strcpy(char *dest, char *src)
 }
 
 /* another method using pointer notation
-char *_strcpy(char *dest, char *src)
+ * char *_strcpy(char *dest, char *src)
 {
-        while (*src)
+	while (*src)
 	{
- 	   *dest = *src;
+	*dest = *src;
 	   src++;
 	   dest++;
 	}
