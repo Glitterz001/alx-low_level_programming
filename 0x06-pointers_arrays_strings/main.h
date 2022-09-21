@@ -93,19 +93,4 @@ char *leet(char *s);
 
 void print_number(int n);
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
-
-/** 
- * main - check the code
- *
- * Return: Always 0.
- */
-
-void print_buffer(char *b, int size);
 #endif
