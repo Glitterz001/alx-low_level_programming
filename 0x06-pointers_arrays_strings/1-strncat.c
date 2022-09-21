@@ -26,8 +26,9 @@ char *_strncat(char *dest, char *src, int n)
 
 	return (dest);
 }
-/* another method
-char *_strncat(char *dest, char *src, int n)
+/*
+ * another method
+ * char *_strncat(char *dest, char *src, int n)
 {
    //while dest exists and isn't null terminator yet
    while (*dest)

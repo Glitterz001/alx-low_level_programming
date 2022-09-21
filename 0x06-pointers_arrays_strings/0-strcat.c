@@ -26,10 +26,11 @@ char *_strcat(char *dest, char *src)
 	return (dest);
 }
 
-/* another method using pointer notation
-char *_strcat(char *dest, char *src)
+/*
+ * another method using pointer notation
+ * char *_strcat(char *dest, char *src)
 {
-        int i = 0;
+	int i = 0;
 	int j = 0;
 	while (*(dest + i))
 	   i++;
