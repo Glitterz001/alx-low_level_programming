@@ -1,21 +1,28 @@
 #include "main.h"
 
 /**
- * _strcmp - compare two strings
- * @s1: one string
- * @s2: one string
- * Return: int that tells num spaces in between
+ * _strncat - concatenate n bytes to destination string
+ * @dest: string to be appended to
+ * @src: string to append
+ * @n: append n number of bytes(chars)
+ * Return: concatenated string
  */
 
-int _strcmp(char *s1, char *s2)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0;
+	int j = 0;
 
-	while (*(s1 + i) == *(s2 + i) && *(s1 + i))
+	while (dest[i] != '\0') /*i is index of null terminator*/
 		i++;
 
-	if (*(s2 + i))
-		return (*(s1 + i) - *(s2 + i));
-	else
-		return (0);
+	while (src[j] != src[n]) /*append replacing null terminator*/
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+
+	return (dest);
 }
