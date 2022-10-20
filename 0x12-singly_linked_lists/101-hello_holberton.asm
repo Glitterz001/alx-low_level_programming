@@ -1,14 +1,29 @@
-#include <stdio.h>
-#include <stdlib.h>
+global _start         ; This exports _start label and
+                          ; makes entry point to the programing
+    ; ##########################
+    ; code
+    ; ##########################
+    section .text
+_start: 
+    ; ##########################
+    ; write(1, message, length)
+    ; ##########################
+    mov  rax, 1              ; system call for write
+    mov  rdi, 1              ; making file handle stdout
+    mov  rsi, message        ; passing adress of string to output
+    mov  rdx, length         ; number of bytes
+    syscall                  ; invoking os to write
 
-/**
- * Entry point - funtion name
- * main fuction
- * Return value: return 0 on success
- */
+    ; ##########################
+    ; exit(0)
+    ; ##########################
+    mov rax, 60             ; sys call for exit
+    xor rdi, rdi            ; exit code 0
+    syscall                 ; invoke os to exit
 
-main ()
-{
-	prinf("Hello, Holberton/n");
-	return (0);
-}
+    ; ##########################
+    ; Variables
+    ; ##########################
+    section .data   
+message: db "Hello, Holberton", 0xa ; const char * message = "Hello, Holberton"oxa is "\n"
+length: equ $-message;  int length= len(message) =16; 
