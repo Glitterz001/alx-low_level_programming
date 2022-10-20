@@ -1,29 +1,18 @@
-global _start         ; This exports _start label and
-                          ; makes entry point to the programing
-    ; ##########################
-    ; code
-    ; ##########################
+; ----------------------------------------------------------------------------
+; helloholberton.asm
+;
+; This is a Win32 console program that writes "Hello, World" on one line and
+; then exits.  It needs to be linked with a C library.
+; ----------------------------------------------------------------------------
+
+    global  _main
+    extern  _printf
+
     section .text
-_start: 
-    ; ##########################
-    ; write(1, message, length)
-    ; ##########################
-    mov  rax, 1              ; system call for write
-    mov  rdi, 1              ; making file handle stdout
-    mov  rsi, message        ; passing adress of string to output
-    mov  rdx, length         ; number of bytes
-    syscall                  ; invoking os to write
-
-    ; ##########################
-    ; exit(0)
-    ; ##########################
-    mov rax, 60             ; sys call for exit
-    xor rdi, rdi            ; exit code 0
-    syscall                 ; invoke os to exit
-
-    ; ##########################
-    ; Variables
-    ; ##########################
-    section .data   
-message: db "Hello, Holberton", 0xa ; const char * message = "Hello, Holberton"oxa is "\n"
-length: equ $-message;  int length= len(message) =16; 
+_main:
+    push    message
+    call    _printf
+    add     esp, 4
+    ret
+message:
+    db  'Hello,Holberton', 14, 0
