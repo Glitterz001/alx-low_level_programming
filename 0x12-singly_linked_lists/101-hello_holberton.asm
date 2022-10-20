@@ -4,7 +4,7 @@ extern MessageBoxA
 
 section .data 
 title:  db 'Win64', 0
-msg:    db 'Hello, Holberton!', 0
+msg:    db 'Hello, Holberton/n!', 0
 
 section .text
 WinMain:
