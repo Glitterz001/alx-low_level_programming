@@ -1,10 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
- * execute_before_main - executes this function before main function
- * Note: made possible by prior declaration of "__attribute__ ((constructor))"
+ * Entry point - funtion name
+ * main fuction
+ * Return value: return 0 on success
  */
 
-void __attribute__ ((constructor)) execute_before_main()
+main ()
 {
 	prinf("Hello, Holberton/n");
+	return (0);
 }
