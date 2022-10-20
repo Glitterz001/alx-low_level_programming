@@ -6,5 +6,5 @@
 
 void __attribute__ ((constructor)) execute_before_main()
 {
-	prinf("Hello,Holberton/n");
+	prinf("Hello, Holberton/n");
 }
