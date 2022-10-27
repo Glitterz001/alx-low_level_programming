@@ -5,7 +5,6 @@
  * @b: binary
  * Return: unsigned int
  */
-
 unsigned int binary_to_uint(const char *b)
 {
 
@@ -14,24 +13,18 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (error);
-
-	while
-		 (b[len] != '\0')
+	while (b[len] != '\0')
 		len++;
 	len -= 1;
-
-	while
-		 (len >= 0);
+	while (len >= 0)
 	{
 		if ((b[len] != '0') && (b[len] != '1'))
 			return (error);
-
 		if (b[len] == '1')
 			sum += pow;
-
 		pow *= 2;
 		len--;
 	}
-
 	return (sum);
 }
+
