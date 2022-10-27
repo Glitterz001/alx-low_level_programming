@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * Entry point - convert a  binary to an unsigned int
- * @binary
- * Return the converted number
+ * binary_to_uint - convert binary to unsigned int
+ * @b: binary
+ * Return: unsigned int
  */
-
-unsigned int binary_to_uint(const char *b);
+unsigned int binary_to_uint(const char *b)
 {
-	unsigned int sum = 0;
-	int len = 0, i;
 
-	if(b == NULL)
+	int len = 0, i;
+	unsigned int sum = 0;
+
+	if (b == NULL)
 		return (sum);
 
-
+	/* find string length */
 	while (b[len] != '\0')
 		len++;
 	len -= 1;
@@ -31,7 +31,41 @@ unsigned int binary_to_uint(const char *b);
 			sum += (1 * (1 << len));
 		i++;
 		len--;
-	} 
+	}
 
 	return (sum);
 }
+
+/*
+ * alternative method not using bitwise but a power of 2
+ *
+ *
+ * unsigned int binary_to_uint(const char *b)
+ *{
+ *
+ *	int len = 0, pow = 1;
+ *	unsigned int sum = 0, error = 0;
+ *
+ *	if (b == NULL)
+ *		return (error);
+ *
+ *	while (b[len] != '\0') // find string length
+ *		len++;
+ *	len -= 1;
+ *
+ *	while (len >= 0) // iterate from back of string
+ *	{
+ *		if ((b[len] != '0') && (b[len] != '1'))
+ *			return (error);
+ *
+ *		if (b[len] == '1') // add appropriate power of 2 if '1'
+ *			sum += pow;
+ *
+ *		pow *= 2; // update power of 2
+ *		len--;
+ *	}
+ *
+ *	return (sum);
+ *}
+ */
+
