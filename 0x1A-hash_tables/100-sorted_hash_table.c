@@ -44,7 +44,7 @@ shash_table_t *shash_table_create(unsigned long int size);
  * @node: node to insert
  * Return: 1 if success, 0 if fail
  */
-int insert_to_sorted_list(shash_table_t *ht, shash_node_t *node)
+int insert_to_sorted_list(shash_table_t *ht, shash_node_t *node);
 {
 	shash_node_t *tmp;
 
@@ -89,7 +89,7 @@ int insert_to_sorted_list(shash_table_t *ht, shash_node_t *node)
  * Return: 1 if success, 0 if fail
  */
 int create_and_add_node(shash_table_t *ht, const char *key, const char *value,
-			unsigned long int idx)
+			unsigned long int idx);
 {
 	shash_node_t *node = NULL;
 	char *k;
@@ -136,7 +136,7 @@ int create_and_add_node(shash_table_t *ht, const char *key, const char *value,
  * @value: value
  * Return: 1 if success, 0 if fail
  */
-int shash_table_set(shash_table_t *ht, const char *key, const char *value)
+int shash_table_set(shash_table_t *ht, const char *key, const char *value);
 {
 	/* get index */
 	/* if key already exists, update value and return */
@@ -175,7 +175,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
  * @key: key
  * Return: value; or NULL if not found
  */
-char *shash_table_get(const shash_table_t *ht, const char *key)
+char *shash_table_get(const shash_table_t *ht, const char *key);
 {
 	unsigned long int idx;
 	shash_node_t *tmp;
@@ -200,7 +200,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
  * shash_table_print - print key/values of hash table in ascending order
  * @ht: hash table
  */
-void shash_table_print(const shash_table_t *ht)
+void shash_table_print(const shash_table_t *ht);
 {
 	shash_node_t *node;
 	char *comma = "";
@@ -223,7 +223,7 @@ void shash_table_print(const shash_table_t *ht)
  * shash_table_print_rev - print key/values of sorted hashtable in reverse order
  * @ht: hash table
  */
-void shash_table_print_rev(const shash_table_t *ht)
+void shash_table_print_rev(const shash_table_t *ht);
 {
 	shash_node_t *node;
 	char *comma = "";
@@ -246,7 +246,7 @@ void shash_table_print_rev(const shash_table_t *ht)
  * shash_table_delete - free and delete sorted hash table
  * @ht: hash table
  */
-void shash_table_delete(shash_table_t *ht)
+void shash_table_delete(shash_table_t *ht);
 {
 	unsigned long int idx = 0;
 	shash_node_t *node, *next;
