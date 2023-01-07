@@ -5,6 +5,7 @@
  * @size: size
  * Return: pointer to table; NULL if error
  */
+
 shash_table_t *shash_table_create(unsigned long int size)
 {
 	shash_table_t *ht;
