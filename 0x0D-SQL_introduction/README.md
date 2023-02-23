@@ -1,1 +1,0 @@
-introducion to SQL
